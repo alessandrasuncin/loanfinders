@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap');
+    </style>
+    <title>Loanfinder</title>
+</head>
+
+<body>
+    <header>
+        <div class="topnav">
+            <a href="#home" class="active"><img class="logo" src="images/logo.png" height="65px" alt=""></a>
+
+            <div class="navbar">
+                <a href="#">Why Use Loan Finders?</a>
+                <a href="#">Resources</a>
+                <a href="application.html" id="applyButton">Apply Now</a>
+            </div>
+        </div>
+    </header>
+
+    <div class="relative">
+        <div class="shape">
+
+        </div>
+    </div>
+
+    <main class="page-container">
+        <div class="landing-container">
+            <div class="landing-page">
+                <img src="Images/Untitled.png" alt="landing" class="img-landing">
+                <h1>Let Loan Finders do the searching for you.</h1>
+                <p>Loan Finders does the legwork for you, searching for top-rated dealers in your area ready to offer
+                    the
+                    best rates for your credit situation.</p>
+            </div>
+            <div class="button-container">
+                <a href="application.html"><button id="applyButton2" class="apply-button">Apply Now</button></a>
+            </div>
+
+        </div>
+        <div class="how-container">
+            <h1>How it works</h1>
+            <div class="boxgrid">
+                <div class="how-grid">
+                    <img src="Images/apply.png"></img>
+                    <h3>Apply</h3>
+                    <p>Complete our simple application</p>
+                </div>
+                <div class="how-grid">
+                    <img src="Images/search.png"></img>
+                    <h3>Search</h3>
+                    <p>We identify dealerships with the most favorable rates for your credit situation</p>
+                </div>
+                <div class="how-grid">
+                    <img src="Images/match.png"></img>
+                    <h3>Match</h3>
+                    <p>Get matched with a dealer who will reach out to you promptly to finalize details.</p>
+                </div>
+            </div>
+            <a href="application.html"><button id="applyButton" class="preapproved-button">Get Pre-Approved
+                    Now</button></a>
+        </div>
+        <div class="testimonials-container">
+            <h1>Testimonials</h1>
+            <div class="testimonial-grid">
+                <div class="testimonials-box">
+                    <p>Loan Finders was great they helped me get in touch with a dealer in my area very fast!</p>
+                    <p>Joe Shmoe</p>
+                </div>
+                <div class="testimonials-box">
+                    <p>Loan Finders was great they helped me get in touch with a dealer in my area very fast!</p>
+                    <p>Joe Shmoe</p>
+                </div>
+                <div class="testimonials-box">
+                    <p>Loan Finders was great they helped me get in touch with a dealer in my area very fast!</p>
+                    <p>Joe Shmoe</p>
+                </div>
+            </div>
+        </div>
+        <div class="faq-container">
+            <h1>Frequently Asked Questions</h1>
+            <button type="button" class="collapsible">How long does the process take?</button>
+            <div class="faq-content">
+                <p><em>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                        laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
+                        voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
+                        non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</em></p>
+
+            </div>
+            <button type="button" class="collapsible">How long does the process take?</button>
+            <div class="faq-content">
+                <p><em>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                        laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
+                        voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
+                        non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</em></p>
+
+            </div> <button type="button" class="collapsible">How long does the process take?</button>
+            <div class="faq-content">
+                <p><em>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                        laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
+                        voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
+                        non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</em></p>
+
+            </div>
+            <script>
+                var coll = document.getElementsByClassName("collapsible");
+                var i;
+
+                for (i = 0; i < coll.length; i++) {
+                    coll[i].addEventListener("click", function () {
+                        this.classList.toggle("active-toggle");
+                        var content = this.nextElementSibling;
+                        if (content.style.maxHeight) {
+                            content.style.maxHeight = null;
+                        } else {
+                            content.style.maxHeight = content.scrollHeight + "px";
+                        }
+                    });
+                }
+            </script>
+
+
+
+        </div>
+
+
+
+
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-column1">
+                <p><a href="#">Terms and Conditions</a></p>
+                <p><a href="#">Privacy Policy</a></p>
+                <p><a href="#">Agreement</a></p>
+            </div>
+            <div class="footer-column2">
+                <p>This is the footer!</p>
+                <p><a href="#">Home</a></p>
+                <p><a href="#">Menu2</a></p>
+                <p><a href="#">Menu3</a></p>
+            </div>
+            <div class="footer-column3">
+                <p>loanfinder@gmail.com</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>

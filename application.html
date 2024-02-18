@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap');
+    </style>
+    <script src="app.js" defer></script>
+    <title>Loan Finders</title>
+</head>
+
+<body>
+    <header>
+        <div class="topnav-app">
+            <a href="index.html" class=""><img class="logo" src="images/logo.png" alt=""></a>
+        </div>
+    </header>
+    <div class="relative">
+        <div class="shape-inverted">
+
+        </div>
+    </div>
+
+    <main class="page-container">
+        <div steps-application class="topmain">
+            <div class="card" data-step>
+                <h1>Select a vehicle to get started</h1>
+                <div class="selection card-row">
+                    <button type="button" data-next id="car">Car</button>
+                    <button type="button" data-next id="truck">Truck</button>
+                    <button type="button" data-next id="suv">SUV</button>
+                    <button type="button" data-next id="van">Van</button>
+                </div>
+            </div>
+            <div class="card" data-step>
+                <h1>What is your budget?</h1>
+                <div class="selection card-row">
+                    <button type="button" data-next>Under $400 / Month</button>
+                    <button type="button" data-next>$400 - $499 / Month</button>
+                    <button type="button" data-next>$500 - $600 / Month</button>
+                    <button type="button" data-next>Over $600 / Month</button>
+                </div>
+                <button type="button" data-previous class="buttons">Back</button>
+            </div>
+            <div class="card" data-step>
+                <h1>Do you have a trade-in?</h1>
+                <div class="selection card-row">
+                    <button type="button" data-next>Yes</button>
+                    <button type="button" data-next>No</button>
+                </div>
+                <button type="button" data-previous class="buttons">Back</button>
+            </div>
+            <div class="card" data-step>
+                <h1>What is your estimated credit rating?</h1>
+                <div class="selection card-row">
+                    <button type="button" data-next>Good (Over 650)</button>
+                    <button type="button" data-next>Fair (550-650)</button>
+                    <button type="button" data-next>Poor (Under 550)</button>
+                    <button type="button" data-next>Current Bankruptcy</button>
+                    <button type="button" data-next>No Credit/Unsure</button>
+                </div>
+                <button type="button" data-previous class="buttons">Back</button>
+            </div>
+            <div class="card" data-step>
+                <h1>What is your employment status?</h1>
+                <div class="selection card-row">
+                    <button type="button" data-next>Employed</button>
+                    <button type="button" data-next>Self-Employed</button>
+                    <button type="button" data-next>Student</button>
+                    <button type="button" data-next>Retired</button>
+                    <button type="button" data-next>Disability</button>
+                    <button type="button" data-next>Unemployed</button>
+                    <button type="button" data-next>Other</button>
+                </div>
+                <button type="button" data-previous class="buttons">Back</button>
+            </div>
+            <div class="card" data-step>
+                <h1>Where do you work?</h1>
+                <div class="selection card-textform">
+                    <label for="company-name">Company Name</label>
+                    <input type="text" name="company-name" id="company-name" placeholder="Company Name"></input>
+                    <label for="job-title">Job Title</label>
+                    <input type="text" name="job-title" id="job-title" placeholder="Job Title"></input>
+                </div>
+                <button type="button" data-previous class="buttons">Back</button>
+                <button type="button" data-next class="buttons">Next</button>
+            </div>
+            <div class="card" data-step>
+                <h1>What is your monthly income?</h1>
+                <div class="selection card-row">
+                    <button type="button" data-next>Over $4,000</button>
+                    <button type="button" data-next>$3,000 - $4,000</button>
+                    <button type="button" data-next>$2,000 - $3,000</button>
+                    <button type="button" data-next>$1,800 - $2,000</button>
+                    <button type="button" data-next>Below $1,800</button>
+                </div>
+                <button type="button" data-previous class="buttons">Back</button>
+            </div>
+            <div class="card" data-step>
+                <h1>How long have you been earning this income?</h1>
+                <div class="selection card-row">
+                    <button type="button" data-next>Less than 3 months</button>
+                    <button type="button" data-next>3 - 6 Months</button>
+                    <button type="button" data-next>6 - 12 Months</button>
+                    <button type="button" data-next>12 Months - 2 Years</button>
+                    <button type="button" data-next>2+ Years</button>
+                </div>
+                <button type="button" data-previous class="buttons">Back</button>
+            </div>
+            <div class="card" data-step>
+                <h1>Are you a Canadian Citizen or Permanent Resident?</h1>
+                <div class="selection card-grid">
+                    <button type="button" data-next>Yes</button>
+                    <button type="button" data-next>No</button>
+                </div>
+                <button type="button" data-previous class="buttons">Back</button>
+            </div>
+            <div class="card" data-step>
+                <h1>Do you have a valid Canadian driver's licence?</h1>
+                <div class="selection card-grid">
+                    <button type="button" data-next>Yes</button>
+                    <button type="button" data-next>No</button>
+                </div>
+                <button type="button" data-previous class="buttons">Back</button>
+            </div>
+            <div class="card" data-step>
+                <h1>What is your date of birth?</h1>
+                <div class="selection card-dropdownform">
+                    <div>
+                        <label for="day-dropdown">Day:</label>
+                        <select id="day-dropdown" name="day" placeholder="Day">
+                            <option class="placeholder" value="" disable selected hidden>Day</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="month-dropdown">Month:</label>
+                        <select id="month-dropdown" name="month">
+                            <option class="placeholder" value="" disable selected hidden>Month</option>
+                            <option value="january">January</option>
+                            <option value="february">February</option>
+                            <option value="march">March</option>
+                            <option value="april">April</option>
+                            <option value="may">May</option>
+                            <option value="june">June</option>
+                            <option value="july">July</option>
+                            <option value="august">August</option>
+                            <option value="september">September</option>
+                            <option value="october">October</option>
+                            <option value="november">November</option>
+                            <option value="december">December</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="year-dropdown">Year:</label>
+                        <select id="year-dropdown" name="year">
+                            <option class="placeholder" value="" disable selected hidden>Year</option>
+                        </select>
+                    </div>
+                </div>
+                <button type="button" data-previous class="buttons">Previous</button>
+                <button type="button" data-next class="buttons">Next</button>
+            </div>
+            <div class="card" data-step>
+                <h1>Do you own or rent your home?</h1>
+                <div class="selection card-row">
+                    <button type="button" data-next>Own</button>
+                    <button type="button" data-next>Rent</button>
+                    <button type="button" data-next>Other</button>
+                </div>
+                <button type="button" data-previous class="buttons">Previous</button>
+            </div>
+            <div class="card" data-step>
+                <h1>Which province do you reside in?</h1>
+                <div class="selection card-row">
+                    <button type="button" data-next>Alberta</button>
+                    <button type="button" data-next>British Columbia</button>
+                    <a href="#" id="noProvinceLink">Don't see your province?</a>
+                </div>
+                <button type="button" data-previous class="buttons">Previous</button>
+            </div>
+            <div id="myModal" class="modal">
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <p>Loan Finders only operates in BC and AB.</p>
+                </div>
+            </div>
+            <div class="card" data-step>
+                <h1>What is your current address?</h1>
+                <div class="selection card-textform">
+                    <label for="address">Address 1:</label>
+                    <input type="text" name="address" id="address" placeholder="Address line 1"></input>
+                    <label for="address2">Address 2:</label>
+                    <input type="text" name="address2" id="address2" placeholder="Address line 2"></input>
+                    <label for="city">City:</label>
+                    <input type="text" name="city" id="city" placeholder="City"></input>
+                    <label for="province-dropdown">Province:</label>
+                    <select id="province-dropdown" name="province-dropdown">
+                        <option value="" disabled selected hidden>-</option>
+                        <option value="AB">AB</option>
+                        <option value="BC">BC</option>
+                    </select>
+                    <div class="postal-container">
+                        <label for="postalcode">Postal Code:</label>
+                        <input type="text" name="postalcode" id="postalcode" placeholder="Postal Code"></input>
+                    </div>
+                </div>
+                <button type="button" data-previous class="buttons">Previous</button>
+                <button type="button" data-next class="buttons" id="nextButton">Next</button>
+            </div>
+            <div id="myModal" class="modal">
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <p>Loan Finders only operates in BC and AB.</p>
+                </div>
+            </div>
+            <div class="card" data-step>
+                <h1>Your information</h1>
+                <div class="selection card-textform">
+                    <label for="email-address">Email Address</label>
+                    <input type="email" name="email-address" id="email-address" placeholder="example@gmail.com"></input>
+                    <label for="phone-number">Phone Number</label>
+                    <input type="tel" name="phone-number" id="phone-number" placeholder="(123) 456-7890"
+                        maxlength="16"></input>
+                </div>
+                <button type="button" data-previous class="buttons">Back</button>
+                <button type="button" data-next class="buttons" id="nextButton">Submit</button>
+            </div>
+            <div class="card" data-step>
+                <span id="loaderText">Analyzing your answers...</span>
+                <div class="loader">
+                    <i id="checkIcon" class="check-icon" style="display: none;">
+                        <img src="Images/check-mark.png" alt="Check Mark" height="50px">
+                    </i>
+                    <!-- <p id="approvalText" style="display: none;">You have been pre-approved. One of our partners will be
+                        in contact as soon as possible.</p> -->
+                </div>
+            </div>
+            <button type="buttons" class="buttonss" id="submitButton"></button>
+            <div id="myModalSubmit" class="modal-submit">
+                <div class="modal-content-submit">
+                    <span class="close-submit">&times;</span>
+                </div>
+            </div>
+        </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-column1">
+                <p><a href="#">Terms and Conditions</a></p>
+                <p><a href="#">Privacy Policy</a></p>
+                <p><a href="#">Agreement</a></p>
+            </div>
+            <div class="footer-column2">
+                <p>This is the footer!</p>
+                <p><a href="#">Home</a></p>
+                <p><a href="#">Menu2</a></p>
+                <p><a href="#">Menu3</a></p>
+            </div>
+            <div class="footer-column3">
+                <a href="mailto:support@loanfinders.ca">support@loanfinders.ca</a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>
